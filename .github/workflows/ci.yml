@@ -3,7 +3,7 @@ name: Movie API CI
 on: [push]
 
 jobs:
-  run tests:
+  run-tests:
     runs-on: ubuntu-latest
     env:
       DJANGO_SETTINGS_MODULE: netflix.settings
