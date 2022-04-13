@@ -1,6 +1,9 @@
-name: Movie API CI
+name: Movie API CD
 
-on: [push]
+on:
+  push:
+    branches: [master]
+
 
 jobs:
   run-tests:
@@ -27,3 +30,17 @@ jobs:
         run: pip install -r requirements.txt
       - name: Run Tests
         run: pytest 
+    
+  deploy:
+    runs-on: ubuntu-latest
+    needs: test
+    steps:
+      - name: executing remote ssh commands using password
+        uses: appleboy/ssh-action@master
+        with:
+          host: 159.89.104.118
+          username: root
+          key: ${{ secrets.KEY }}
+          script: |
+            git pull
+            systemctl restart gunicorn.service
