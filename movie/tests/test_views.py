@@ -36,5 +36,3 @@ class TestMovieViewSet(TestCase):
         self.assertEquals(data[0]['title'], 'Halk')
         self.assertEquals(data[1]['title'], 'Venom')
         
-        
-        
