@@ -8,7 +8,7 @@ jobs:
       postgres:
         image: postgres
       env:
-        POSTGRES_NAME_NETFLIX: 'netflix_2'
+        POSTGRES_DB: 'netflix_2'
         POSTGRES_USER: 'learn'
         POSTGRES_PASSWORD: '123'
       ports:
