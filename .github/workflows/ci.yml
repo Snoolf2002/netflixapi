@@ -8,9 +8,9 @@ jobs:
       postgres:
         image: postgres
       env:
-        POSTGRES_NAME: netflix_2
-        POSTGRES_USER: learn
-        POSTGRES_PASSWORD: 123
+        - POSTGRES_NAME: netflix_2
+        - POSTGRES_USER: learn
+        - POSTGRES_PASSWORD: 123
       ports:
         - 5432:5432
 
