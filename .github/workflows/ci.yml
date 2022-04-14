@@ -7,12 +7,12 @@ jobs:
     services:
       postgres:
         image: postgres
-      env:
-        POSTGRES_NAME_NETFLIX: netflix_2
-        POSTGRES_USER: learn
-        POSTGRES_PASSWORD: 123
-      ports:
-        - 5432:5432
+        env:
+          POSTGRES_NAME_NETFLIX: netflix_2
+          POSTGRES_USER: learn
+          POSTGRES_PASSWORD: 123
+        ports:
+          - 5432:5432
 
 
     runs-on: ubuntu-latest
