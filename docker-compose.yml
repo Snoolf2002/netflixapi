@@ -4,7 +4,7 @@ services:
   app:
     build: .
     environment:
-      - POSTGRES_NAME=netflix_2
+      - POSTGRES_NAME_NETFLIX=netflix_2
       - POSTGRES_USER=learn
       - POSTGRES_PASSWORD=123
       - POSTGRES_HOST=db
